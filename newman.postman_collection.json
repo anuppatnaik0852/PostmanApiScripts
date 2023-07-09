@@ -1,0 +1,36 @@
+{
+  "info": {
+    "_postman_id": "40d69603-ac2f-455b-8665-695b892a29e4",
+    "name": "newman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "sample api",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function() {",
+              "    pm.response.to.have.status(200)",
+              "})"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/todos/1",
+          "protocol": "https",
+          "host": ["jsonplaceholder", "typicode", "com"],
+          "path": ["todos", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
